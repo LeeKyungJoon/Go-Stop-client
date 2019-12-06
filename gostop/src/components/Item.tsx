@@ -101,7 +101,7 @@ class Item extends Component<any, any, any> {
                             // tslint:disable-next-line: no-unused-expression
             if (element.item.category === 'top') {
               return <TouchableOpacity key={index}
-                        onPress = {() => { this.props.imagechange(element.item.itemImg); }}>
+                        onPress = {() => { this.props.imagechange1(element.item.itemImg); }}>
                         <Image key={index} style={s.pink} source={{ uri: element.item.itemImg }}/>
                     </TouchableOpacity>;
             }
@@ -124,7 +124,7 @@ class Item extends Component<any, any, any> {
                             // tslint:disable-next-line: no-unused-expression
             if (element.item.category === 'bottom') {
               return <TouchableOpacity key={index}
-                        onPress = {() => { this.props.imagechange(element.item.itemImg); }}>
+                        onPress = {() => { this.props.imagechange2(element.item.itemImg); }}>
                         <Image key={index} style={s.pink} source={{ uri: element.item.itemImg }}/>
                     </TouchableOpacity>;
             }
