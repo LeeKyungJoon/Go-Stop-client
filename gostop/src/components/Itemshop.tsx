@@ -87,7 +87,7 @@ class Itemshop extends Component<any, any> {
                         style: 'cancel',
                       },
                       {text: 'OK', onPress: () => {
-                        if (head.price < this.props.hascoinsvalue) {
+                        if (head.price <= this.props.hascoinsvalue) {
                           this.props.coinchange(-head.price),
                           // tslint:disable-next-line: brace-style
                           this.props.additem(head.itemImg),
@@ -142,7 +142,7 @@ class Itemshop extends Component<any, any> {
                         style: 'cancel',
                       },
                       {text: 'OK', onPress: () => {
-                        if (top.price < this.props.hascoinsvalue) {
+                        if (top.price <= this.props.hascoinsvalue) {
                           this.props.coinchange(-top.price),
                           // tslint:disable-next-line: brace-style
                           this.props.additem1(top.itemImg),
@@ -197,7 +197,7 @@ class Itemshop extends Component<any, any> {
                         style: 'cancel',
                       },
                       {text: 'OK', onPress: () => {
-                        if (bottom.price < this.props.hascoinsvalue) {
+                        if (bottom.price <= this.props.hascoinsvalue) {
                           this.props.coinchange(-bottom.price),
                           // tslint:disable-next-line: brace-style
                           this.props.additem2(bottom.itemImg),
@@ -312,7 +312,6 @@ function mapStateToProps(state) {
     uri: state.changeReducer.uri,
     uri1: state.changeReducer1.uri1,
     uri2: state.changeReducer2.uri2,
-    coinsvalue : state.changepointreducer.coinsvalue,
     heads: state.additem.heads,
     tops: state.additem1.tops,
     pantss: state.additem2.pantss,
